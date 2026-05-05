@@ -9,7 +9,7 @@ Le système choisit un pokémon secret de 5 lettres. Le joueur a 6 tentatives po
 Après chaque tentative, chaque lettre reçoit un état :  
 🟩 CORRECT : bonne lettre, bonne place  
 🟨 MISPLACED : la lettre est dans le mot mais ailleurs  
-⬛ ABSENT: la lettre n'est pas dans le mot  
+⬛ ABSENT: la lettre n'est pas dans le mot
 
 Règle spéciale (lettres multiples) : si une lettre apparaît plusieurs fois dans la proposition mais moins de fois dans le pokémon secret, elle ne peut être CORRECT ou MISPLACED qu'à concurrence de son nombre d'occurrences dans le secret. Les occurrences en trop sont marquées ABSENT.
 
@@ -50,6 +50,17 @@ npm start
 ```
 
 Saisis tes propositions directement dans le terminal. Le jeu affiche le feedback après chaque tentative et gère la victoire / défaite.
+
+## Screen du jeux
+
+### Victoire
+![Victoire](docs/readme/win.png)
+
+### Défaite
+![Défaite](docs/readme/loose.png)
+
+### Erreur
+![Erreur](docs/readme/error.png)
 
 ## Démarche
 
