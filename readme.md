@@ -54,12 +54,15 @@ Saisis tes propositions directement dans le terminal. Le jeu affiche le feedback
 ## Screen du jeux
 
 ### Victoire
+
 ![Victoire](docs/readme/win.png)
 
 ### Défaite
+
 ![Défaite](docs/readme/loose.png)
 
 ### Erreur
+
 ![Erreur](docs/readme/error.png)
 
 ## Démarche

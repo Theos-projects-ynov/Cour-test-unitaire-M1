@@ -1,5 +1,5 @@
 import * as readline from "readline";
-import { createNewGame, proposeGuess, evaluateGuess } from "./wordle.js";
+import { createNewGame, proposeGuess } from "./wordle.js";
 import { LocalDictionary } from "./local-dictionary.js";
 import type { Word } from "./type.js";
 
@@ -15,12 +15,12 @@ console.log("=== Pokémon Wordle ===");
 console.log("Devine le mot de 5 lettres en 6 essais !\n");
 
 function displayFeedback(feedback: string[]) {
-  const emojis = feedback.map((f) => {
+  const correctSquare = feedback.map((f) => {
     if (f === "CORRECT") return "🟩";
     if (f === "MISPLACED") return "🟨";
     return "⬛";
   });
-  console.log(emojis.join(" "));
+  console.log(correctSquare.join(" ")); 
 }
 
 function askGuess() {
@@ -28,7 +28,7 @@ function askGuess() {
     if (state.status === "WON") {
       console.log("\nBravo, tu as gagné !");
     } else {
-      console.log("\nPerdu... Le mot était : " + state.targetWord);
+      console.log("\nPerdu... Le mot était : " + state.targetWord); 
     }
     rl.close();
     return;

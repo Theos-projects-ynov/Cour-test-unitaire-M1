@@ -173,7 +173,7 @@ describe("Validation des entrées", () => {
     // When
     const action = () => validateGuess(input, stubDictionary);
 
-    // Then
+    // Then 
     expect(action).toThrow(InputLessThan5LettersError);
   });
 

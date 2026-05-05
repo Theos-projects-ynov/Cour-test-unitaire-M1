@@ -8,8 +8,9 @@ export class LocalDictionary implements Dictionary {
     const rawWord = words[randomIndex];
     const cleanWord = rawWord
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[\u0300-\u036f]/g, "") // C'est pour les accents et les caractères spéciaux (merci https://stackoverflow.com/questions/286921/efficiently-replace-all-accented-characters-in-a-string)
       .toUpperCase();
+
     return cleanWord as Word;
   }
 
